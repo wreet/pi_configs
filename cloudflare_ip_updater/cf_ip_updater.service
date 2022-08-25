@@ -1,0 +1,10 @@
+[Unit]
+Description=cf_ip_updater
+
+[Service]
+WorkingDirectory=[PATH_TO_UPDATE_SCRIPT_DIR]
+ExecStart=/usr/bin/node [PATH_TO_UPDATE_SCRIPT_DIR]/cf_ip_updater.js
+User=[LOCAL_USER]
+
+[Install]
+WantedBy=multi-user.target 
