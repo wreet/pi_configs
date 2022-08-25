@@ -1,0 +1,8 @@
+[Match]
+# replace eth0 with your device's internet-facing ethernet device
+Name=eth0
+ 
+[Network]
+# if this is not a mobile VPN router, a static IP works best here
+# I have opted to set that on my router, but you could do it here
+DHCP=yes

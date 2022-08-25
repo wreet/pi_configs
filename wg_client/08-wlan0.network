@@ -1,0 +1,25 @@
+[Match]
+# replace with your wireless interface
+Name=wlan0
+
+[Link]
+MTUBytes=1420
+
+[Network]
+# ip range for clients
+Address=192.168.10.1/24
+MulticastDNS=yes
+# let systemd handle masquerading, yay no dnsmasq!
+IPMasquerade=ipv4
+DHCPServer=yes
+
+[DHCPServer]
+# set DNS for clients, I am having them use my local DNS
+# if you are using this as a portable VPN wifi router
+# then you should probably use something like cloudflare 
+DNS=192.168.2.100
+EmitDNS=yes
+# I start the range at 100
+PoolOffset=100
+# limit 25 leases, more than enough 
+PoolSize=25
